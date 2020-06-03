@@ -1,8 +1,12 @@
-# social-distance Computer Vision
+# social-distance - Computer Vision
 
-Repositorio Git: 
+Repositorio Git:
 
 https://github.com/a20144012/social-distance
+
+
+## Ejecutar el proyecto
+```
 
 Para utilizar la siguiente aplicacion:
 
@@ -21,5 +25,3 @@ Ejecutar el siguiente comando:
 El video de salida se creará en la ruta:
 
 video/TownCentreXVID_output.avi
-
-

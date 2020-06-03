@@ -10,11 +10,12 @@ from random import randint
 
 _LINE_COLOR = (24, 12, 248)
 _CIRCLE_COLOR = (242, 0, 0)
+_RECTANGLE_COLOR = (75, 13, 135)
 _SOLID_BACK_COLOR = (81, 81, 81)
 _EB_HEIGHT = 1080
 _EB_WIDTH = 1080
-_LENGTH_CRITERION = 75 #representa 1.5 metros en pixeles
-_HEIGHt_TOP_PADDING = 320 #altura del relleno superior
+_LENGTH_CRITERION = 91 #representa 1.5 metros en pixeles
+_HEIGHt_TOP_PADDING = 320 #altura del relleno superior 320
 
 #Calcula la distancia entre dos puntos
 #dentro de la lista
@@ -59,8 +60,8 @@ def matrix_perspective():
     #los puntos de origen fueron calculados de forma experimental, dentro de varias
     #opciones se observo que este origen es la mejor opcion ademas de aprovechar
     #la mayor cantidad de puntos en las imagenes leidas.
-    #quadrilateral_s = np.float32([ [1152, 120],  [1914, 450], [1328, 1390], [144, 686]])
-    quadrilateral_s = np.float32([ [1216, 111],  [1914, 450], [1328, 1390], [144, 686]])
+    quadrilateral_s = np.float32([ [1152, 120],  [1914, 450], [1328, 1390], [144, 686]])
+    #quadrilateral_s = np.float32([[976, 0], [1920, 169], [1364, 1068], [0, 442]])
     quadrilateral_t = np.float32([[0, 0], [_EB_WIDTH, 0], [_EB_WIDTH, _EB_HEIGHT], [0, _EB_HEIGHT]])
 
     #Obtener matriz de transformacion
@@ -69,7 +70,7 @@ def matrix_perspective():
     return matrix_p
 
 #Crea la vista eye-bird, transforma la lista
-#de puntos  y los muestra en forma de circulo
+#de puntos y para mostrarlos como circulos
 def create_eye_bird(points, matrix_t):
 
     #Transformar puntos a la nueva perspectiva
@@ -114,7 +115,7 @@ with open("input-csv/TC.csv", mode='r') as csv_file:
 
     csv_reader = csv.DictReader(csv_file)
 
-    #leemos el video e en el segundo 0
+    #leemos el video en el segundo 0
     video_input.set(cv2.CAP_PROP_POS_MSEC, video_input_second)
     _ , img = video_input.read()
     count = 0
@@ -152,7 +153,7 @@ with open("input-csv/TC.csv", mode='r') as csv_file:
             img,
             (dc(row["bl"]), dc(row["bt"])),
             (dc(row["br"]), dc(row["bb"])),
-            (75, 13, 135),
+            _RECTANGLE_COLOR,
             2)
 
         #calculamos el centro del rectangulo para representar
