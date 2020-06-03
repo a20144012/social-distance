@@ -1,5 +1,9 @@
 # social-distance Computer Vision
 
+Repositorio Git: 
+
+https://github.com/a20144012/social-distance
+
 Para utilizar la siguiente aplicacion:
 
 Se debe de copiar el archivo .csv a la ruta:
