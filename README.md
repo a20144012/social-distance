@@ -25,13 +25,13 @@ El video de salida se creará en la ruta:
 
 video/TownCentreXVID_output.avi
 
-#### opcion 1
+#### Opción 1
 
 La imagen siguiente muestra los puntos de referencia tomados
 ![mark4points](images/opt-1/image-LINES.jpg)
 
 
-#### opcion 2
+#### Opción 2
 
 La imagen siguiente muestra los puntos de referencia tomados
 ![mark4points](images/opt-2/image-LINES.jpg)
